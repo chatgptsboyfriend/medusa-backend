@@ -1,0 +1,6 @@
+{
+  "setup": ["nodejs@20.19.6"],
+  "install": ["npm ci --legacy-peer-deps --no-optional"],
+  "build": ["npm run build"],
+  "deploy": ["npm run start"]
+}
