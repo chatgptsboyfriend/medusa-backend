@@ -17,3 +17,4 @@ EXPOSE 9000
 
 # Start
 CMD ["npm", "run", "start"]
+
