@@ -1,20 +1,12 @@
+# Force rebuild v4 - 2025-01-14
 FROM node:20-alpine
-
 WORKDIR /app
-
-# Install dependencies
 COPY package*.json ./
-RUN npm ci --omit=dev
-
-# Copy source code
+RUN npm ci
 COPY . .
-
-# Build
+ENV NODE_ENV=production
 RUN npm run build
-
-# Expose port
+RUN npm prune --omit=dev
 EXPOSE 9000
-
-# Start
 CMD ["npm", "run", "start"]
 
