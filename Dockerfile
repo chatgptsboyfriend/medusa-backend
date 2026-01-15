@@ -1,16 +1,15 @@
-# Stable Medusa v2 - admin fix
 FROM node:20-alpine
 WORKDIR /app
-
 COPY package*.json ./
 RUN npm ci
-
 COPY . .
-ENV NODE_ENV=production
 
-# Build admin + API explicitement
+# Build AVANT de passer en production
 RUN npm run build
-RUN npx medusa build
 
+# Supprime les devDeps après le build
+RUN npm prune --production
+
+ENV NODE_ENV=production
 EXPOSE 9000
 CMD ["npm", "run", "start"]
