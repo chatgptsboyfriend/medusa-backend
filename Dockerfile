@@ -1,10 +1,9 @@
 FROM node:20-alpine
+# Force rebuild 2026-01-15
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-# Force rebuild
-ARG CACHEBUST=1
 RUN npm run build
 ENV NODE_ENV=production
 EXPOSE 9000
