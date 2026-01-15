@@ -14,7 +14,7 @@ module.exports = defineConfig({
     }
   },
   admin: {                                      // ← NOUVELLE SECTION
-    disable: false,
+    disable: true,
     backendUrl: process.env.MEDUSA_BACKEND_URL,
   },
   modules: [
