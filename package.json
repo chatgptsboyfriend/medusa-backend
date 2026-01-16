@@ -22,10 +22,10 @@
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
   },
   "dependencies": {
-    "@medusajs/admin-sdk": "2.12.3",
-    "@medusajs/cli": "2.12.3",
-    "@medusajs/framework": "2.12.3",
-    "@medusajs/medusa": "2.12.3",
+    "@medusajs/admin-sdk": "2.12.5",
+    "@medusajs/cli": "2.12.5",
+    "@medusajs/framework": "2.12.5",
+    "@medusajs/medusa": "2.12.5",
     "medusa-plugin-smtp": "^1.2.0"
   },
   "devDependencies": {
