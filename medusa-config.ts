@@ -38,20 +38,3 @@ module.exports = defineConfig({
             id: "stripe",
             options: {
               apiKey: process.env.STRIPE_API_KEY,
-            },
-          },
-        ],
-      },
-    },
-  ],
-})
-```
-
-N'oublie pas :
-
-1. `npm install medusa-file-cloudinary` dans ton projet
-2. Ajouter les variables dans ton `.env` et sur Railway :
-```
-CLOUDINARY_CLOUD_NAME=dg3d9mrrp
-CLOUDINARY_API_KEY=868627955876176
-CLOUDINARY_API_SECRET=gcWBxdnVkaD-Mpr0_PCNqRGzj8o
